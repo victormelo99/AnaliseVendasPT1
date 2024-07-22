@@ -45,12 +45,10 @@ namespace Course
                     Console.WriteLine("Valor total vendido pelo vendedor Logan nos meses 1 e 7 = "+sumLogan);
                 }
             }
-            catch (Exception e) 
+            catch (FileNotFoundException) 
             {
-                Console.Write("error: ");
-                Console.Write(e.Message);
+                Console.Write($"error: {path} (o sistema não pode encontrar o arquivo especificado");
             }
-            
         }
     }
 }
